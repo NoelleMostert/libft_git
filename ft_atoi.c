@@ -14,7 +14,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
->>>>>>> a33309f84ce09515b401fbcf13e6d18730ca01db
 #include "libft.h"
 
 int	ft_atoi(const char *str)
@@ -26,15 +25,11 @@ int	ft_atoi(const char *str)
 	i = 0;
 	neg_flag = 0;
 	result = 0;
-<<<<<<< HEAD
-
 	while (str[i] == '\n' || str[i] == '\t' || str[i] == '\r' ||
 			str[i] == '\v' || str[i] == '\f' || str[i] == ' ')
 		i++;
 	while (str[i] != '\0')
-=======
-	while (str[i])
->>>>>>> a33309f84ce09515b401fbcf13e6d18730ca01db
+
 	{
 		result *= 10;
 		if (str[i] == '-' && !(neg_flag))
