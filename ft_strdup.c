@@ -1,9 +1,21 @@
-#include <libft.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nmostert <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/05/21 11:18:40 by nmostert          #+#    #+#             */
+/*   Updated: 2018/05/21 16:53:20 by nmostert         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int	ft_strdup(const char *src)
+#include "libft.h"
+
+char	*ft_strdup(const char *src)
 {
-	char *dest;
-	int i;
+	char	*dest;
+	int		i;
 
 	i = 0;
 	dest = (char *)malloc(sizeof(char) * ft_strlen(src));

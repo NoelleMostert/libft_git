@@ -1,4 +1,16 @@
-#include <libft.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nmostert <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/05/21 11:16:04 by nmostert          #+#    #+#             */
+/*   Updated: 2018/05/21 16:47:34 by nmostert         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_atoi(const char *str)
 {
@@ -9,7 +21,6 @@ int	ft_atoi(const char *str)
 	i = 0;
 	neg_flag = 0;
 	result = 0;
-
 	while (str[i])
 	{
 		result *= 10;
@@ -20,6 +31,6 @@ int	ft_atoi(const char *str)
 		i++;
 	}
 	if (neg_flag)
-		return(result * -1);
-	return(result);
+		return (result * -1);
+	return (result);
 }
