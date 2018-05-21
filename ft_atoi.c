@@ -1,20 +1,5 @@
-<<<<<<< HEAD
 #include <stdio.h>
 #include <unistd.h>
-=======
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: nmostert <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/21 11:16:04 by nmostert          #+#    #+#             */
-/*   Updated: 2018/05/21 16:47:34 by nmostert         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
->>>>>>> a33309f84ce09515b401fbcf13e6d18730ca01db
 #include "libft.h"
 
 int	ft_atoi(const char *str)
@@ -26,15 +11,11 @@ int	ft_atoi(const char *str)
 	i = 0;
 	neg_flag = 0;
 	result = 0;
-<<<<<<< HEAD
-
 	while (str[i] == '\n' || str[i] == '\t' || str[i] == '\r' ||
 			str[i] == '\v' || str[i] == '\f' || str[i] == ' ')
 		i++;
 	while (str[i] != '\0')
-=======
-	while (str[i])
->>>>>>> a33309f84ce09515b401fbcf13e6d18730ca01db
+
 	{
 		result *= 10;
 		if (str[i] == '-' && !(neg_flag))
@@ -48,7 +29,8 @@ int	ft_atoi(const char *str)
 	return (result);
 }
 
-int main () {
+int main ()
+{
    int val;
    char str[20];
    
