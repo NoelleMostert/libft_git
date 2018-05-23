@@ -20,6 +20,7 @@ int	ft_atoi(const char *str);
 void	*ft_memset(void *str, int c, size_t n);
 
 char	*ft_strcpy(char *dest, char *src);
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 
 size_t	ft_strlen(const char *str);
 
