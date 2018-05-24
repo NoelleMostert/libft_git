@@ -6,11 +6,10 @@
 /*   By: nmostert <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/21 11:18:40 by nmostert          #+#    #+#             */
-/*   Updated: 2018/05/22 13:31:58 by nmostert         ###   ########.fr       */
+/*   Updated: 2018/05/24 12:30:28 by nmostert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
 char	*ft_strdup(const char *src)
@@ -27,14 +26,4 @@ char	*ft_strdup(const char *src)
 	}
 	dest[i] = '\0';
 	return (dest);
-}
-
-int main (){
-
-    const char* s1= "Hello World";
-    char* new = ft_strdup (s1);
-
-    fprintf( stdout , "%s\n", new);
-
-    return 0;
 }

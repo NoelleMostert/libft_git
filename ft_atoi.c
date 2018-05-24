@@ -1,5 +1,15 @@
-#include <stdio.h>
-#include <unistd.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nmostert <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/05/24 12:02:39 by nmostert          #+#    #+#             */
+/*   Updated: 2018/05/24 12:03:19 by nmostert         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 int	ft_atoi(const char *str)
@@ -10,7 +20,6 @@ int	ft_atoi(const char *str)
 
 	while (str[i] == ' ' || !ft_isprint(str[i]))
 		i++;
-
 	sign = 1;
 	if (str[i] == '-')
 	{
@@ -19,25 +28,8 @@ int	ft_atoi(const char *str)
 	}
 	while (str[i] >= '0' && str[i] <= '9')
 	{
-		result = result * 10 +  (str[i] - '0');
+		result = result * 10 + (str[i] - '0');
 		i++;
 	}
 	return (result * sign);
-}
-
-int main ()
-{
-   int val;
-   char str[20];
-
-   
-   strcpy(str, "123");
-   val = ft_atoi(str);
-   printf("My atoi string value = %s, My atoi int value = %d\n", str, val);
-
-   strcpy(str, "123");
-   val = atoi(str);
-   printf("Lib string value = %s, Lib int value = %d\n", str, val);
-
-   return(0);
 }
