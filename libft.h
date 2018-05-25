@@ -19,6 +19,7 @@ int	ft_atoi(const char *str);
 int	ft_memcmp(const void *str1, const void *str2, size_t n);
 
 void	*ft_memset(void *str, int c, size_t n);
+void 	ft_bzero(void *s, size_t n);
 
 char	*ft_strcpy(char *dest, char *src);
 char	*ft_strncpy(char *dest, const char *src, size_t len);

@@ -6,15 +6,14 @@
 /*   By: nmostert <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/22 13:34:18 by nmostert          #+#    #+#             */
-/*   Updated: 2018/05/22 13:49:18 by nmostert         ###   ########.fr       */
+/*   Updated: 2018/05/25 13:52:15 by nmostert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*strcat(char *dest, const char *src)
+char	*strcat(char *restrict s1, const char *restrict s2)
 {
-	int i;
-
-	
-
+	ft_strcpy(s1 + ft_strlen(s1), s2);
+	return (s1);
+}
