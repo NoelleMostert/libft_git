@@ -6,7 +6,7 @@
 #    By: nmostert <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/30 10:52:24 by nmostert          #+#    #+#              #
-#    Updated: 2018/05/30 17:30:19 by nmostert         ###   ########.fr        #
+#    Updated: 2018/05/31 11:20:30 by nmostert         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,6 +56,7 @@ CFILES=ft_atoi.c \
 		ft_strstr.c \
 		ft_tolower.c \
 		ft_toupper.c \
+		ft_isspace.c \
 
 OBJ=$(CFILES:%.c=%.o)
 
@@ -75,4 +76,4 @@ fclean: clean
 
 re: fclean $(NAME)
 
-.PHONY=clean fclean re
+.PHONY: clean fclean re

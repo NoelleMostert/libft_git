@@ -6,7 +6,7 @@
 /*   By: nmostert <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/30 10:44:33 by nmostert          #+#    #+#             */
-/*   Updated: 2018/05/30 16:29:46 by nmostert         ###   ########.fr       */
+/*   Updated: 2018/05/31 11:12:55 by nmostert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ int		ft_isdigit(int c);
 int		ft_isascii(int c);
 int		ft_isalnum(int c);
 int		ft_isprint(int c);
+int		ft_isspace(int c);
 int		ft_strcmp(const char *s1, const char *s2);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_strdupl(const char *src);
