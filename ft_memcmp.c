@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nmostert <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/05/30 10:33:24 by nmostert          #+#    #+#             */
+/*   Updated: 2018/05/30 10:33:32 by nmostert         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 int	ft_memcmp(const void *str1, const void *str2, size_t n)
 {
-	size_t i;
-	unsigned char *ptr1;
-	unsigned char *ptr2;
+	size_t			i;
+	unsigned char	*ptr1;
+	unsigned char	*ptr2;
 
 	i = 0;
 	ptr1 = (unsigned char *)str1;

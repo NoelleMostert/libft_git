@@ -1,4 +1,16 @@
-include "libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nmostert <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/05/30 10:28:47 by nmostert          #+#    #+#             */
+/*   Updated: 2018/05/30 11:09:56 by nmostert         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_putnbr_fd(int n, int fd)
 {
@@ -7,7 +19,7 @@ void	ft_putnbr_fd(int n, int fd)
 
 	number = n;
 	if (n < 0)
-	{i
+	{
 		number = number * -1;
 		ft_putchar_fd('-', fd);
 	}
