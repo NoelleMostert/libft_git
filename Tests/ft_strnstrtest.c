@@ -1,18 +1,18 @@
 #include <stdio.h>
 #include "libft.h"
 
-int main ()
+int main()
 {
-   char haystack[20] = "Point";
-   char needle[10] = "ab";
-   int length;
-   char *ret;
+	const char *largestring = "Foo Bar Baz";
+	const char *smallstring = "Bar";
+	char	*ptr;
+	char	*ptr1;
+	
+	ptr = strnstr(largestring, smallstring, 4);
+	ptr1 = ft_strnstr(largestring, smallstring, 4);
 
-   length = 4;
+	printf("This is the system result: %s\n", ptr);
+	printf("This is my result: %s\n", ptr1);
 
-   ret = ft_strnstr(haystack, needle, length);
-
-   printf("The substring is: %s\n", ret);
-
-   return(0);
+	return (0);
 }

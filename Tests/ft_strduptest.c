@@ -1,12 +1,12 @@
 #include <stdio.h>
 #include "libft.h"
 
-int main (){
+int main()
+{
+    char *p1 = "";
+    char *p2;
+    p2 = ft_strdup(p1);
 
-    const char* s1= "Hello World";
-    char* new = ft_strdup (s1);
-
-    fprintf( stdout , "%s\n", new);
-
+    printf("Duplicated string is : %s", p2);
     return 0;
 }
