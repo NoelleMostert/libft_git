@@ -6,7 +6,7 @@
 /*   By: nmostert <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/30 10:44:33 by nmostert          #+#    #+#             */
-/*   Updated: 2018/05/31 11:12:55 by nmostert         ###   ########.fr       */
+/*   Updated: 2018/06/01 12:30:11 by nmostert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ int		ft_isprint(int c);
 int		ft_isspace(int c);
 int		ft_strcmp(const char *s1, const char *s2);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
-int		ft_strdupl(const char *src);
 int		ft_atoi(const char *str);
 int		ft_memcmp(const void *str1, const void *str2, size_t n);
 int		ft_strequ(char const *s1, char const *s2);
@@ -55,6 +54,7 @@ void	ft_putnbr_fd(int n, int fd);
 void	ft_putstr_fd(char const *s, int fd);
 void	ft_putendl_fd(char const *s, int fd);
 
+char	*ft_strdup(const char *s1);
 char	*ft_itoa(int n);
 char	**ft_strsplit(char const *s, char c);
 char	*ft_strtrim(char const *s);
