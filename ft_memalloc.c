@@ -6,7 +6,7 @@
 /*   By: nmostert <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/30 10:38:37 by nmostert          #+#    #+#             */
-/*   Updated: 2018/05/30 10:38:52 by nmostert         ###   ########.fr       */
+/*   Updated: 2018/06/03 10:59:59 by nmostert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,5 @@ void	*ft_memalloc(size_t size)
 	if (!mem)
 		return (NULL);
 	ft_bzero(mem, size);
-	return (NULL);
+	return (mem);
 }
