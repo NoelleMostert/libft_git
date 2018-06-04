@@ -1,18 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isupper.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nmostert <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/04 14:26:00 by nmostert          #+#    #+#             */
-/*   Updated: 2018/06/04 14:26:05 by nmostert         ###   ########.fr       */
+/*   Created: 2018/05/21 11:18:40 by nmostert          #+#    #+#             */
+/*   Updated: 2018/06/01 15:32:27 by nmostert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isupper(int c)
+char	*ft_strdup(const char *s1)
 {
-	return (c <= 'Z' && c >= 'A');
+	char			*dest;
+	const size_t	i = ft_strlen(s1) + 1;
+
+	dest = (char *)malloc(sizeof(char) * ft_strlen(s1) + 1);
+	if (!dest)
+		return (NULL);
+	return (ft_memcpy(dest, s1, i));
 }

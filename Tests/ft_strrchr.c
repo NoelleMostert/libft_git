@@ -1,18 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isupper.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nmostert <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/04 14:26:00 by nmostert          #+#    #+#             */
-/*   Updated: 2018/06/04 14:26:05 by nmostert         ###   ########.fr       */
+/*   Created: 2018/05/30 10:21:38 by nmostert          #+#    #+#             */
+/*   Updated: 2018/06/01 14:51:29 by nmostert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isupper(int c)
+char	*ft_strrchr(const char *s, int c)
 {
-	return (c <= 'Z' && c >= 'A');
+	int i;
+
+	i = (int)ft_strlen(s);
+	while (i >= 0)
+	{
+		if (s[i] == (char)c)
+			return ((char *)s + i);
+		i--;
+	}
+	return (NULL);
 }

@@ -1,18 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isupper.c                                       :+:      :+:    :+:   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nmostert <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/04 14:26:00 by nmostert          #+#    #+#             */
-/*   Updated: 2018/06/04 14:26:05 by nmostert         ###   ########.fr       */
+/*   Created: 2018/05/30 10:22:02 by nmostert          #+#    #+#             */
+/*   Updated: 2018/05/30 10:22:15 by nmostert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isupper(int c)
+char	*ft_strnew(size_t size)
 {
-	return (c <= 'Z' && c >= 'A');
+	char *str;
+
+	str = (char *)malloc(sizeof(char) * size + 1);
+	if (!str)
+		return (NULL);
+	ft_bzero(str, size + 1);
+	return (str);
 }

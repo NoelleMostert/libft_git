@@ -1,18 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isupper.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nmostert <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/04 14:26:00 by nmostert          #+#    #+#             */
-/*   Updated: 2018/06/04 14:26:05 by nmostert         ###   ########.fr       */
+/*   Created: 2018/05/30 10:28:47 by nmostert          #+#    #+#             */
+/*   Updated: 2018/05/30 11:09:56 by nmostert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isupper(int c)
+void	ft_putnbr_fd(int n, int fd)
 {
-	return (c <= 'Z' && c >= 'A');
+	char a;
+	long number;
+
+	number = n;
+	if (n < 0)
+	{
+		number = number * -1;
+		ft_putchar_fd('-', fd);
+	}
+	if (number >= 10)
+		ft_putnbr_fd(number / 10, fd);
+	a = 48 + (number % 10);
+	ft_putchar_fd(a, fd);
 }

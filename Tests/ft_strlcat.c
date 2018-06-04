@@ -1,18 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isupper.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nmostert <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/04 14:26:00 by nmostert          #+#    #+#             */
-/*   Updated: 2018/06/04 14:26:05 by nmostert         ###   ########.fr       */
+/*   Created: 2018/05/30 10:23:56 by nmostert          #+#    #+#             */
+/*   Updated: 2018/06/03 11:04:17 by nmostert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isupper(int c)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	return (c <= 'Z' && c >= 'A');
+	size_t		i;
+	int			j;
+	size_t		dstlen;
+	size_t		srclen;
+
+	i = ft_strlen(dst);
+	j = 0;
+	dstlen = ft_strlen(dst);
+	srclen = ft_strlen(src);
+	if (dstsize < dstlen + 1)
+		return (srclen + dstsize);
+	if (dstsize > dstlen + 1)
+	{
+		while (i < dstsize - 1)
+		{
+			dst[i] = src[j];
+			i++;
+			j++;
+		}
+		dst[i] = '\0';
+	}
+	return (dstlen + srclen);
 }

@@ -1,18 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isupper.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nmostert <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/04 14:26:00 by nmostert          #+#    #+#             */
-/*   Updated: 2018/06/04 14:26:05 by nmostert         ###   ########.fr       */
+/*   Created: 2018/06/04 09:48:42 by nmostert          #+#    #+#             */
+/*   Updated: 2018/06/04 10:03:38 by nmostert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isupper(int c)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	return (c <= 'Z' && c >= 'A');
+	char	*str;
+	int		i;
+
+	i = 0;
+	if (s)
+	{
+		str = ft_strdup(s);
+		if (str)
+		{
+			while (str[i])
+			{
+				str[i] = f(i, str[i]);
+				i++;
+			}
+			return (str);
+		}
+	}
+	return (0);
 }

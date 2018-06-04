@@ -1,18 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isupper.c                                       :+:      :+:    :+:   */
+/*   ft_strcopy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nmostert <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/04 14:26:00 by nmostert          #+#    #+#             */
-/*   Updated: 2018/06/04 14:26:05 by nmostert         ###   ########.fr       */
+/*   Created: 2018/06/04 13:20:27 by nmostert          #+#    #+#             */
+/*   Updated: 2018/06/04 13:22:45 by nmostert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isupper(int c)
+char	*ft_strcopy(char *ret, const char *s, int start, int end)
 {
-	return (c <= 'Z' && c >= 'A');
+	int		count;
+
+	count = 0;
+	while (start <= end)
+	{
+		ret[count] = s[start];
+		count++;
+		start++;
+	}
+	ret[count] = '\0';
+	return (ret);
 }

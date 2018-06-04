@@ -1,18 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isupper.c                                       :+:      :+:    :+:   */
+/*   ft_stringput.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nmostert <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/04 14:26:00 by nmostert          #+#    #+#             */
-/*   Updated: 2018/06/04 14:26:05 by nmostert         ###   ########.fr       */
+/*   Created: 2018/06/04 11:47:35 by nmostert          #+#    #+#             */
+/*   Updated: 2018/06/04 12:11:25 by nmostert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isupper(int c)
+char	*ft_stringput(char *dest, const char *src, int dcount)
 {
-	return (c <= 'Z' && c >= 'A');
+	int		scount;
+
+	scount = 0;
+	while (src[scount] != '\0')
+	{
+		dest[dcount] = src[scount];
+		dcount++;
+		scount++;
+	}
+	return (dest);
 }

@@ -1,18 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isupper.c                                       :+:      :+:    :+:   */
+/*   ft_remspace.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nmostert <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/04 14:26:00 by nmostert          #+#    #+#             */
-/*   Updated: 2018/06/04 14:26:05 by nmostert         ###   ########.fr       */
+/*   Created: 2018/06/04 13:23:03 by nmostert          #+#    #+#             */
+/*   Updated: 2018/06/04 13:23:42 by nmostert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isupper(int c)
+int		ft_remspace(const char *str, int c)
 {
-	return (c <= 'Z' && c >= 'A');
+	if (c == 0)
+	{
+		while (str[c] == ' ' || str[c] == '\t' || str[c] == '\n')
+			c++;
+		return (c);
+	}
+	else
+	{
+		while (str[c] == ' ' || str[c] == '\t' || str[c] == '\n'
+				|| str[c] == '\0')
+			c--;
+		return (c);
+	}
 }

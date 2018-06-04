@@ -1,18 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isupper.c                                       :+:      :+:    :+:   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nmostert <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/04 14:26:00 by nmostert          #+#    #+#             */
-/*   Updated: 2018/06/04 14:26:05 by nmostert         ###   ########.fr       */
+/*   Created: 2018/05/30 10:31:14 by nmostert          #+#    #+#             */
+/*   Updated: 2018/05/30 10:35:25 by nmostert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isupper(int c)
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
-	return (c <= 'Z' && c >= 'A');
+	char		*ptr;
+	size_t		i;
+
+	i = 0;
+	ptr = dst;
+	while (i < n)
+	{
+		ptr[i] = ((unsigned char *)src)[i];
+		if (((unsigned char *)src)[i] == (unsigned char)c)
+			return (dst + (i + 1));
+		i++;
+	}
+	return (NULL);
 }
