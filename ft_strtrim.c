@@ -1,28 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nmostert <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/04 09:47:20 by nmostert          #+#    #+#             */
-/*   Updated: 2018/06/04 11:00:58 by nmostert         ###   ########.fr       */
+/*   Created: 2018/06/04 11:05:56 by nmostert          #+#    #+#             */
+/*   Updated: 2018/06/04 11:08:14 by nmostert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+char	*ft_strtrim(char const *s)
 {
-	int i;
-
-	i = 0;
-	if (s)
-	{
-		while (s[i])
-		{
-			f(i, &s[i]);
-			i++;
-		}
-	}
+	return (0);
 }

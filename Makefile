@@ -6,7 +6,7 @@
 #    By: nmostert <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/30 10:52:24 by nmostert          #+#    #+#              #
-#    Updated: 2018/05/31 11:20:30 by nmostert         ###   ########.fr        #
+#    Updated: 2018/06/04 11:50:42 by nmostert         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,7 +57,20 @@ CFILES=ft_atoi.c \
 		ft_tolower.c \
 		ft_toupper.c \
 		ft_isspace.c \
-
+		ft_striter.c \
+		ft_striteri.c \
+		ft_strmap.c \
+		ft_strmapi.c \
+		ft_strequ.c \
+		ft_strnequ.c \
+		ft_strsub.c \
+		ft_strjoin.c \
+		ft_strtrim.c \
+		ft_strsplit.c \
+		ft_itoa.c \
+		ft_wordcount.c \
+		ft_stringput.c \
+		
 OBJ=$(CFILES:%.c=%.o)
 
 all: $(NAME)

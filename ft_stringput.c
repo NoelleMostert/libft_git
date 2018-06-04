@@ -1,28 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_stringput.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nmostert <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/04 09:47:20 by nmostert          #+#    #+#             */
-/*   Updated: 2018/06/04 11:00:58 by nmostert         ###   ########.fr       */
+/*   Created: 2018/06/04 11:47:35 by nmostert          #+#    #+#             */
+/*   Updated: 2018/06/04 11:53:18 by nmostert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+char	*ft_stringput(char *dest, const char *src, int dcount)
 {
-	int i;
+	int		scount;
 
-	i = 0;
-	if (s)
+	scount = 0;
+	while (src[scount] != '\0')
 	{
-		while (s[i])
-		{
-			f(i, &s[i]);
-			i++;
-		}
+		dest[dcount] = src[scount];
+		dcount++;
+		scount++;
 	}
+	return (dest);
 }
