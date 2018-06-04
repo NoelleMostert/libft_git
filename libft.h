@@ -6,7 +6,7 @@
 /*   By: nmostert <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/30 10:44:33 by nmostert          #+#    #+#             */
-/*   Updated: 2018/06/01 12:30:11 by nmostert         ###   ########.fr       */
+/*   Updated: 2018/06/04 13:24:39 by nmostert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,5 +74,11 @@ char	*ft_strstr(const char *haystack, const char *needle);
 
 size_t	ft_strlen(const char *str);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
+
+char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_stringput(char *dest, const char *src, int dcount);
+char	*ft_strcopy(char *ret, const char *s, int start, int end);
+int		ft_remspace(const char *str, int c);
+int		ft_wordcount(const char *str, char c);
 
 #endif

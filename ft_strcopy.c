@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_stringput.c                                     :+:      :+:    :+:   */
+/*   ft_strcopy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nmostert <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/04 11:47:35 by nmostert          #+#    #+#             */
-/*   Updated: 2018/06/04 12:11:25 by nmostert         ###   ########.fr       */
+/*   Created: 2018/06/04 13:20:27 by nmostert          #+#    #+#             */
+/*   Updated: 2018/06/04 13:22:45 by nmostert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_stringput(char *dest, const char *src, int dcount)
+char	*ft_strcopy(char *ret, const char *s, int start, int end)
 {
-	int		scount;
+	int		count;
 
-	scount = 0;
-	while (src[scount] != '\0')
+	count = 0;
+	while (start <= end)
 	{
-		dest[dcount] = src[scount];
-		dcount++;
-		scount++;
+		ret[count] = s[start];
+		count++;
+		start++;
 	}
-	return (dest);
+	ret[count] = '\0';
+	return (ret);
 }

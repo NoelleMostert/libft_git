@@ -6,7 +6,7 @@
 #    By: nmostert <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/30 10:52:24 by nmostert          #+#    #+#              #
-#    Updated: 2018/06/04 11:50:42 by nmostert         ###   ########.fr        #
+#    Updated: 2018/06/04 13:27:04 by nmostert         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -70,7 +70,10 @@ CFILES=ft_atoi.c \
 		ft_itoa.c \
 		ft_wordcount.c \
 		ft_stringput.c \
-		
+		ft_wordcount.c \
+		ft_remspace.c \
+		ft_strcopy.c \
+
 OBJ=$(CFILES:%.c=%.o)
 
 all: $(NAME)

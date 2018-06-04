@@ -1,27 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_stringput.c                                     :+:      :+:    :+:   */
+/*   ft_remspace.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nmostert <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/04 11:47:35 by nmostert          #+#    #+#             */
-/*   Updated: 2018/06/04 12:11:25 by nmostert         ###   ########.fr       */
+/*   Created: 2018/06/04 13:23:03 by nmostert          #+#    #+#             */
+/*   Updated: 2018/06/04 13:23:42 by nmostert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_stringput(char *dest, const char *src, int dcount)
+int		ft_remspace(const char *str, int c)
 {
-	int		scount;
-
-	scount = 0;
-	while (src[scount] != '\0')
+	if (c == 0)
 	{
-		dest[dcount] = src[scount];
-		dcount++;
-		scount++;
+		while (str[c] == ' ' || str[c] == '\t' || str[c] == '\n')
+			c++;
+		return (c);
 	}
-	return (dest);
+	else
+	{
+		while (str[c] == ' ' || str[c] == '\t' || str[c] == '\n'
+				|| str[c] == '\0')
+			c--;
+		return (c);
+	}
 }
