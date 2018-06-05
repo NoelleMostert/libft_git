@@ -1,30 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_memalloctest.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nmostert <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/30 10:31:14 by nmostert          #+#    #+#             */
-/*   Updated: 2018/06/05 10:45:25 by nmostert         ###   ########.fr       */
+/*   Created: 2018/06/05 10:47:21 by nmostert          #+#    #+#             */
+/*   Updated: 2018/06/05 11:01:23 by nmostert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include "libft.h"
 
-void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
+int		main(void)
 {
-	char		*ptr;
-	size_t		i;
-
-	i = 0;
-	ptr = dst;
-	while (i < n)
+	size_t *ptr;
+	size_t *ptr1;
+	int 	i = 0;
+	
+	while (i < 10)
 	{
-		ptr[i] = ((unsigned char *)src)[i];
-		if (((unsigned char *)src)[i] == (unsigned char)c)
-			return (dst + i + 1);
+	  printf("i is %zu\n", ptr[i]);
+	  i++;
+	}
+	
+	i = 0;
+	ptr1 = (size_t*)ft_memalloc(sizeof(size_t) * 10);
+	while (i < 10)
+	{
+		printf("i is %zu\n", ptr1[i]);
 		i++;
 	}
-	return (NULL);
+	return (0);
 }

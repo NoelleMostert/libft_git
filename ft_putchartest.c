@@ -1,30 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_putchartest.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nmostert <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/30 10:31:14 by nmostert          #+#    #+#             */
-/*   Updated: 2018/06/05 10:45:25 by nmostert         ###   ########.fr       */
+/*   Created: 2018/06/05 11:46:18 by nmostert          #+#    #+#             */
+/*   Updated: 2018/06/05 11:49:31 by nmostert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include "libft.h"
 
-void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
-{
-	char		*ptr;
-	size_t		i;
+int main () {
+   char ch;
 
-	i = 0;
-	ptr = dst;
-	while (i < n)
-	{
-		ptr[i] = ((unsigned char *)src)[i];
-		if (((unsigned char *)src)[i] == (unsigned char)c)
-			return (dst + i + 1);
-		i++;
-	}
-	return (NULL);
+   for(ch = 'A' ; ch <= 'Z' ; ch++) {
+      putchar(ch);
+   }
+    for(ch = 'A' ; ch <= 'Z' ; ch++) {
+     ft_putchar(ch);
+   }
+   
+   return(0);
 }

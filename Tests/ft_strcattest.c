@@ -1,33 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpytest.c                                   :+:      :+:    :+:   */
+/*   ft_strcattest.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nmostert <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/05 10:22:06 by nmostert          #+#    #+#             */
-/*   Updated: 2018/06/05 10:26:43 by nmostert         ###   ########.fr       */
+/*   Created: 2018/06/05 11:52:15 by nmostert          #+#    #+#             */
+/*   Updated: 2018/06/05 11:57:54 by nmostert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
-#include <stdlib.h>
 #include "libft.h"
 
-char* msg = "This is the string: not copied";
+int main () {
+   char src[50], dest[50];
+   char src1[50], dest1[50];
 
-int main( void )
-{
-    char buffer[80];
-	char buffer1[80];
+   strcpy(src, "This is source");
+   strcpy(dest, "This is destination");
 
-    memset(buffer, '\0', 80);
-    memccpy(buffer, msg, ':', 80);
-	ft_memccpy(buffer1, msg, ':', 80);
+   strcpy(src1, "This is source");
+   strcpy(dest1, "This is destination");
 
-    printf("%s\n", buffer);
-	printf("%s\n", buffer1);
+   strcat(dest, src);
+   ft_strcat(dest1, src1);
 
-    return EXIT_SUCCESS;
+   printf("Final destination string : |%s|\n", dest); 
+   printf("Final destination of my string cat : |%s|", dest1);
+   
+   return(0);
 }
