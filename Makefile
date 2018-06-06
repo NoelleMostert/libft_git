@@ -6,7 +6,7 @@
 #    By: nmostert <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/30 10:52:24 by nmostert          #+#    #+#              #
-#    Updated: 2018/06/06 10:03:51 by nmostert         ###   ########.fr        #
+#    Updated: 2018/06/06 13:59:53 by nmostert         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -73,12 +73,10 @@ CFILES=ft_atoi.c \
 		ft_wordcount.c \
 		ft_remspace.c \
 		ft_strcopy.c \
-		ft_lstnew.c \
-		ft_lstdel.c \
-		ft_delone.c \
 		ft_lstadd.c \
 		ft_lstiter.c \
-		ft_lstmap.c \
+		ft_lstdelone.c \
+		ft_lstdel.c \
 
 OBJ=$(CFILES:%.c=%.o)
 
